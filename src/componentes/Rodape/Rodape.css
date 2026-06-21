@@ -1,0 +1,9 @@
+﻿.rodape-app {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto 16px;
+  text-align: center;
+  color: var(--cor-texto-secundario);
+  font-size: 13px;
+  padding: 12px 0;
+}
+

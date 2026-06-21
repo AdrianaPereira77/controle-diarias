@@ -1,0 +1,43 @@
+.item-diaria__root {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 8px; /* Adiciona um espaçamento entre os cartões de diária */
+  border-radius: 8px; /* Borda arredondada para o cartão */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o cartão */
+
+  display: flex;
+  flex-direction: column; /* Informações empilhadas verticalmente */
+  gap: 8px;
+}
+
+.item-diaria__info-linha {
+  display: flex;
+  justify-content: space-between; /* Alinha itens à esquerda e direita */
+  align-items: center;
+}
+
+.item-diaria__descricao {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--cor-texto-padrao);
+}
+
+.item-diaria__valor {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--cor-primaria); /* Usa a cor primária para o valor */
+}
+
+.item-diaria__data,
+.item-diaria__projeto {
+  font-size: 0.9em;
+  color: var(--cor-cinza);
+}
+
+.item-diaria__observacoes {
+  font-size: 0.9em;
+  color: var(--cor-texto-padrao);
+  margin-top: 4px;
+  border-top: 1px solid var(--cor-fundo-padrao);
+  padding-top: 4px;
+}

@@ -1,0 +1,24 @@
+﻿.botao-customizado {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.botao-customizado--primario {
+  background: var(--cor-primaria);
+  color: #ffffff;
+}
+
+.botao-customizado--secundario {
+  background: #ffffff;
+  color: var(--cor-texto-padrao);
+  border: 1px solid var(--cor-borda);
+}
+
+.botao-customizado--perigo {
+  background: var(--cor-erro);
+  color: #ffffff;
+}
+

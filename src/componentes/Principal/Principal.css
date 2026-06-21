@@ -1,0 +1,23 @@
+﻿.principal__root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.principal__titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.principal__titulo-voltar {
+  width: fit-content;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--cor-texto-secundario);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+

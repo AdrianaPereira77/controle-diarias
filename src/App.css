@@ -1,0 +1,20 @@
+﻿.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.app-shell__conteudo {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 20px 0 28px;
+}
+
+.app-shell__nao-encontrada {
+  background: #ffffff;
+  border: 1px solid #d9e2f2;
+  border-radius: 18px;
+  padding: 40px 24px;
+  text-align: center;
+}
+

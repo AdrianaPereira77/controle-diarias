@@ -1,0 +1,21 @@
+.avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.avatar-circulo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.avatar-nome {
+  font-size: 0.9em;
+  color: #333;
+}

@@ -1,0 +1,119 @@
+﻿.lista-diarias__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.lista-diarias__card,
+.lista-diarias__painel {
+  background: #ffffff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.lista-diarias__card {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lista-diarias__card span {
+  color: var(--cor-texto-secundario);
+}
+
+.lista-diarias__card strong {
+  font-size: 36px;
+}
+
+.lista-diarias__card-valor--regular { color: var(--cor-sucesso); }
+.lista-diarias__card-valor--pendente { color: var(--cor-secundaria-escura); }
+.lista-diarias__card-valor--ressalva { color: #b45309; }
+
+.lista-diarias__painel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lista-diarias__painel-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.lista-diarias__botao-nova {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lista-diarias__filtros {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.lista-diarias__checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lista-diarias__tabela-wrapper {
+  overflow-x: auto;
+}
+
+.lista-diarias__tabela {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.lista-diarias__tabela th,
+.lista-diarias__tabela td {
+  text-align: left;
+  padding: 14px 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lista-diarias__badge {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.lista-diarias__badge--regular { background: #dcfce7; color: #166534; }
+.lista-diarias__badge--pendente { background: #ffedd5; color: #9a3412; }
+.lista-diarias__badge--ressalva { background: #fef3c7; color: #92400e; }
+
+.lista-diarias__acoes {
+  display: flex;
+  gap: 8px;
+}
+
+.lista-diarias__acoes button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.lista-diarias__mensagem-vazia {
+  text-align: center;
+  color: var(--cor-texto-secundario);
+}
+
+@media (max-width: 720px) {
+  .lista-diarias__painel-topo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

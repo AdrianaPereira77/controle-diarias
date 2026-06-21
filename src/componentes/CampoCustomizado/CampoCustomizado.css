@@ -1,0 +1,34 @@
+﻿.campo-customizado {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-customizado label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.campo-customizado__input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.campo-customizado__input:focus {
+  outline: none;
+  border-color: var(--cor-info);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.campo-customizado__obrigatorio,
+.campo-customizado__erro {
+  color: var(--cor-erro);
+}
+
+.campo-customizado__erro {
+  font-size: 13px;
+}
+
