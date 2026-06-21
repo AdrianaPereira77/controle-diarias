@@ -117,16 +117,16 @@ function ListaDiarias() {
             <tbody>
               {diariasFiltradas.map((diaria) => (
                 <tr key={diaria.id}>
-                  <td>{diaria.numero}</td>
-                  <td>{diaria.agentePublico}</td>
-                  <td>{diaria.cidade}</td>
-                  <td>{formatarData(diaria.dataPagamento)}</td>
-                  <td>
+                  <td data-label="Nº Diária">{diaria.numero}</td>
+                  <td data-label="Agente Público">{diaria.agentePublico}</td>
+                  <td data-label="Cidade">{diaria.cidade}</td>
+                  <td data-label="Data Pagamento">{formatarData(diaria.dataPagamento)}</td>
+                  <td data-label="Situação">
                     <span className={`lista-diarias__badge lista-diarias__badge--${diaria.situacao.toLowerCase()}`}>
                       {diaria.situacao}
                     </span>
                   </td>
-                  <td>
+                  <td data-label="Ações">
                     <div className="lista-diarias__acoes">
                       <button type="button" onClick={() => navigate(`/cadastro-diaria/${diaria.id}`)}>
                         <MdEdit size={18} />

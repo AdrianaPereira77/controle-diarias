@@ -1,4 +1,5 @@
-﻿import { MdOutlineLogout, MdOutlinePerson } from "react-icons/md";
+import { MdOutlineLogout, MdOutlinePerson } from "react-icons/md";
+import AlternadorTema from "../AlternadorTema/AlternadorTema";
 import BotaoCustomizado from "../BotaoCustomizado/BotaoCustomizado";
 import "./Cabecalho.css";
 
@@ -13,15 +14,17 @@ function Cabecalho({ userName, userEmail, onLogout }) {
         </div>
       </div>
 
-      <BotaoCustomizado tipo="secundario" aoClicar={onLogout}>
-        <span className="cabecalho-app__botao">
-          <MdOutlineLogout size={18} />
-          Sair
-        </span>
-      </BotaoCustomizado>
+      <div className="cabecalho-app__acoes">
+        <AlternadorTema />
+        <BotaoCustomizado tipo="secundario" aoClicar={onLogout}>
+          <span className="cabecalho-app__botao">
+            <MdOutlineLogout size={18} />
+            Sair
+          </span>
+        </BotaoCustomizado>
+      </div>
     </header>
   );
 }
 
 export default Cabecalho;
-

@@ -11,6 +11,7 @@ import Cabecalho from "./componentes/Cabecalho/Cabecalho";
 import Rodape from "./componentes/Rodape/Rodape";
 import RotaProtegida from "./componentes/RotaProtegida/RotaProtegida";
 import { ProvedorAutenticacao, useAutenticacao } from "./contexto/AutenticacaoContexto";
+import { ProvedorTema } from "./contexto/TemaContexto";
 import CadastroDiaria from "./paginas/CadastroDiaria/CadastroDiaria";
 import CadastroUsuario from "./paginas/CadastroUsuario/CadastroUsuario";
 import ListaDiarias from "./paginas/ListaDiarias/ListaDiarias";
@@ -83,10 +84,12 @@ const roteador = createHashRouter([
 
 function App() {
   return (
-    <ProvedorAutenticacao>
-      <RouterProvider router={roteador} />
-      <ToastContainer position="top-right" autoClose={2500} />
-    </ProvedorAutenticacao>
+    <ProvedorTema>
+      <ProvedorAutenticacao>
+        <RouterProvider router={roteador} />
+        <ToastContainer position="top-right" autoClose={2500} theme="colored" />
+      </ProvedorAutenticacao>
+    </ProvedorTema>
   );
 }
 

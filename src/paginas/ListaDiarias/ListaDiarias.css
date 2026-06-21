@@ -1,15 +1,16 @@
-﻿.lista-diarias__cards {
+.lista-diarias__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 14px;
 }
 
 .lista-diarias__card,
 .lista-diarias__painel {
-  background: #ffffff;
+  background: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
   border-radius: 18px;
   padding: 20px;
+  box-shadow: var(--sombra-suave);
 }
 
 .lista-diarias__card {
@@ -76,7 +77,7 @@
 .lista-diarias__tabela td {
   text-align: left;
   padding: 14px 10px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--cor-borda-suave);
 }
 
 .lista-diarias__badge {
@@ -101,8 +102,15 @@
   height: 36px;
   border: 1px solid var(--cor-borda);
   border-radius: 10px;
-  background: #ffffff;
+  background: var(--cor-superficie);
+  color: var(--cor-texto-padrao);
   cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.lista-diarias__acoes button:hover {
+  border-color: var(--cor-info);
+  color: var(--cor-info);
 }
 
 .lista-diarias__mensagem-vazia {
@@ -117,3 +125,48 @@
   }
 }
 
+@media (max-width: 600px) {
+  .lista-diarias__tabela-wrapper {
+    overflow-x: visible;
+  }
+
+  .lista-diarias__tabela {
+    min-width: 0;
+  }
+
+  .lista-diarias__tabela thead {
+    display: none;
+  }
+
+  .lista-diarias__tabela tr {
+    display: block;
+    border: 1px solid var(--cor-borda);
+    border-radius: 14px;
+    padding: 6px 14px;
+    margin-bottom: 12px;
+  }
+
+  .lista-diarias__tabela td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    text-align: right;
+  }
+
+  .lista-diarias__tabela td:last-child {
+    border-bottom: none;
+  }
+
+  .lista-diarias__tabela td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--cor-texto-secundario);
+    text-align: left;
+  }
+
+  .lista-diarias__acoes {
+    justify-content: flex-end;
+  }
+}

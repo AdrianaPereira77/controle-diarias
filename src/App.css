@@ -11,10 +11,17 @@
 }
 
 .app-shell__nao-encontrada {
-  background: #ffffff;
-  border: 1px solid #d9e2f2;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
   border-radius: 18px;
   padding: 40px 24px;
   text-align: center;
+  box-shadow: var(--sombra-suave);
+}
+
+@media (max-width: 720px) {
+  .app-shell__conteudo {
+    padding: 16px 0 24px;
+  }
 }
 

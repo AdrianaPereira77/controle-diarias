@@ -1,7 +1,7 @@
-﻿.cabecalho-app {
+.cabecalho-app {
   width: min(1180px, calc(100% - 32px));
   margin: 18px auto 0;
-  background: #ffffff;
+  background: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
   border-radius: 18px;
   padding: 18px 22px;
@@ -9,10 +9,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 .cabecalho-esquerda h1 {
-  font-size: clamp(26px, 4vw, 40px);
+  font-size: clamp(20px, 4vw, 40px);
   margin-bottom: 6px;
 }
 
@@ -21,6 +22,14 @@
   align-items: center;
   gap: 6px;
   color: var(--cor-texto-secundario);
+  word-break: break-word;
+}
+
+.cabecalho-app__acoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .cabecalho-app__botao {
@@ -34,5 +43,8 @@
     flex-direction: column;
     align-items: stretch;
   }
-}
 
+  .cabecalho-app__acoes {
+    justify-content: space-between;
+  }
+}

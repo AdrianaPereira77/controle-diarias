@@ -1,0 +1,24 @@
+.alternador-tema {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;
+  background: var(--cor-superficie);
+  color: var(--cor-texto-padrao);
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.alternador-tema:hover {
+  border-color: var(--cor-info);
+  color: var(--cor-info);
+}
+
+.alternador-tema:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}

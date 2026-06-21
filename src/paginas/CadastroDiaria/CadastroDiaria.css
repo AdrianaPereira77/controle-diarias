@@ -5,10 +5,11 @@
 }
 
 .cadastro-diaria__bloco {
-  background: #ffffff;
+  background: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
   border-radius: 18px;
   padding: 20px;
+  box-shadow: var(--sombra-suave);
 }
 
 .cadastro-diaria__bloco h3 {

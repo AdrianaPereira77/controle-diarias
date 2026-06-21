@@ -1,5 +1,5 @@
 ﻿.deslocamento-formulario {
-  background: #f8fbff;
+  background: var(--cor-superficie-2);
   border: 1px solid var(--cor-borda);
   border-radius: 14px;
   padding: 16px;

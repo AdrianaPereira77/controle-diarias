@@ -1,19 +1,32 @@
 .autenticacao-layout {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px 16px;
-  background: linear-gradient(160deg, var(--cor-primaria-clara), #dbe6fb);
+  background: linear-gradient(160deg, var(--cor-fundo), var(--cor-superficie-2));
+}
+
+.autenticacao-layout__topo {
+  position: absolute;
+  top: 16px;
+  right: 16px;
 }
 
 .autenticacao-layout__cartao {
   width: min(420px, 100%);
-  background: #ffffff;
+  background: var(--cor-superficie);
   border: 1px solid var(--cor-borda);
   border-radius: 18px;
   padding: 32px 28px;
-  box-shadow: 0 18px 40px rgba(18, 21, 43, 0.12);
+  box-shadow: var(--sombra-cartao);
+}
+
+@media (max-width: 480px) {
+  .autenticacao-layout__cartao {
+    padding: 26px 20px;
+  }
 }
 
 .autenticacao-layout__cabecalho {

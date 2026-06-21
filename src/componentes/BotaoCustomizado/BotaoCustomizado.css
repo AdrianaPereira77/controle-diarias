@@ -4,6 +4,11 @@
   padding: 11px 16px;
   cursor: pointer;
   font-weight: 600;
+  transition: filter 0.15s, background-color 0.2s, border-color 0.2s;
+}
+
+.botao-customizado:hover {
+  filter: brightness(1.08);
 }
 
 .botao-customizado--primario {
@@ -12,7 +17,7 @@
 }
 
 .botao-customizado--secundario {
-  background: #ffffff;
+  background: var(--cor-superficie);
   color: var(--cor-texto-padrao);
   border: 1px solid var(--cor-borda);
 }

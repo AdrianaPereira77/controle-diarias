@@ -6,7 +6,7 @@
 
 .campo-customizado label {
   font-weight: 600;
-  color: #374151;
+  color: var(--cor-label);
 }
 
 .campo-customizado__input {
@@ -14,7 +14,9 @@
   padding: 12px 14px;
   border: 1px solid var(--cor-borda);
   border-radius: 10px;
-  background: #ffffff;
+  background: var(--cor-superficie);
+  color: var(--cor-texto-padrao);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 
 .campo-customizado__input:focus {

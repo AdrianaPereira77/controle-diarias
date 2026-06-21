@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --cor-primaria: #12152b;
   --cor-primaria-clara: #eef4ff;
   --cor-secundaria: #f59e0b;
@@ -6,9 +6,38 @@
   --cor-sucesso: #16a34a;
   --cor-info: #2563eb;
   --cor-erro: #dc2626;
+
+  --cor-fundo: #eef4ff;
+  --cor-superficie: #ffffff;
+  --cor-superficie-2: #f8fbff;
   --cor-texto-padrao: #111827;
   --cor-texto-secundario: #4b5563;
+  --cor-label: #374151;
   --cor-borda: #d9e2f2;
+  --cor-borda-suave: #e5e7eb;
+  --sombra-cartao: 0 18px 40px rgba(18, 21, 43, 0.12);
+  --sombra-suave: 0 1px 3px rgba(18, 21, 43, 0.06), 0 8px 22px rgba(18, 21, 43, 0.05);
+
+  color-scheme: light;
+}
+
+:root[data-tema="dark"] {
+  --cor-primaria: #3b82f6;
+  --cor-primaria-clara: #1a2030;
+  --cor-info: #60a5fa;
+
+  --cor-fundo: #0f1420;
+  --cor-superficie: #1a2030;
+  --cor-superficie-2: #222a3d;
+  --cor-texto-padrao: #e5e9f0;
+  --cor-texto-secundario: #9aa5b8;
+  --cor-label: #cbd5e1;
+  --cor-borda: #2c3548;
+  --cor-borda-suave: #2c3548;
+  --sombra-cartao: 0 18px 40px rgba(0, 0, 0, 0.45);
+  --sombra-suave: 0 1px 3px rgba(0, 0, 0, 0.4);
+
+  color-scheme: dark;
 }
 
 * {
@@ -24,9 +53,10 @@ body,
 }
 
 body {
-  background: var(--cor-primaria-clara);
+  background: var(--cor-fundo);
   color: var(--cor-texto-padrao);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 button,
@@ -35,4 +65,3 @@ select,
 textarea {
   font: inherit;
 }
-
